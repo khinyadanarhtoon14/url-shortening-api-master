@@ -7,6 +7,20 @@ $container-max-widths: (
   xl: 1140px,
 //   xxl: 1320px
 );
+
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 6,
+  7: $spacer * 9,
+  8: $spacer * 12,
+  9: $spacer * 15,
+);
 $font-family-sans-serif:'Poppins', sans-serif;
 $font-weight-bold:700;
 $primary:hsl(180, 66%, 49%);
@@ -14,10 +28,15 @@ $black:hsl(255, 11%, 22%);
 $navbar-nav-link-padding-x:2rem;
 $btn-padding-x:2rem;
 $btn-padding-y:0.7rem;
+$font-size-base:1.125rem;
+$btn-font-size:1.2rem;
 $nav-link-hover-color:hsl(255, 11%, 22%);
 $nav-link-color:hsl(257, 7%, 63%);
 $btn-link-color:hsl(255, 11%, 22%);
-
+$input-padding-x:2rem;
+$input-padding-y:0.7rem;
+$headings-color:hsl(255, 11%, 22%);
+$body-color:hsl(257, 7%, 63%);
 // - Cyan: 
 // - Dark Violet: hsl(257, 27%, 26%)
 
@@ -39,32 +58,84 @@ $btn-link-color:hsl(255, 11%, 22%);
     background-position: bottom right;
     height:400px;
 }
-.hero-heading{
-    color:hsl(257, 27%, 26%);
-    
-}
-.hero-para{
-    color:hsl(0, 0%, 75%);  
-}
+
+
 .Feature{
-   background-color: hsl(0, 0%, 75%); 
+   background-color: hsl(225deg 33.33% 95.29%); 
 }
 
 .shorten{
     background-color:hsl(257, 27%, 26%);
     background-image: url(../images/bg-shorten-desktop.svg);
     background-repeat: no-repeat;
-    background-position: center;
+    // background-position: center;
+    background-size: cover;
+    transform: translateY(-50%);
+    
 }
-@include media-breakpoint-down(md) {
+.shorten .shorten-btn{
+display: block;
+width: 100%;
+}
+
+
+  .static-card{
+   
+    // height:14rem;
+  }
+  .static-img{
+    width:60px;
+    height:60px;
+    border-radius: 50%;
+    background-color:hsl(257, 27%, 26%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-50%);
+  }
+
+  .static-para{
+    margin-top: -30px;
+  }
+
+  .boost{
+    background-color:hsl(257, 27%, 26%);
+    background-image: url(../images/bg-boost-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .footer{
+    background-color: hsl(255, 11%, 22%);
+  }
+
+  @include media-breakpoint-down(md) {
+   
     .hero{
         height:600px;
         background-position:top !important;
         background-repeat:no-repeat;
         
     }
-  }
 
+    .shorten{
+        background-color:hsl(257, 27%, 26%);
+        background-image: url(../images/bg-shorten-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position:center;
+    }
+
+    .boost{
+        background-color:hsl(257, 27%, 26%);
+        background-image: url(../images/bg-boost-mobile.svg) !important;
+        background-position: center;
+        background-size: cover;
+       
+      }
+
+    
+  }
 
   @include media-breakpoint-down(lg) {
     .hero{
