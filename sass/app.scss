@@ -109,6 +109,10 @@ width: 100%;
     background-color: hsl(255, 11%, 22%);
   }
 
+  .dropdown-menu{
+    display: none;
+  }
+
   @include media-breakpoint-down(md) {
    
     .hero{
@@ -133,6 +137,15 @@ width: 100%;
         background-size: cover;
        
       }
+      .dropdown-btn{
+        width:100%
+      }
+
+   .Feature .dropdown a {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width:100%;
+   }
 
     
   }

@@ -21765,6 +21765,10 @@ textarea.form-control-lg {
   background-color: hsl(255, 11%, 22%);
 }
 
+.dropdown-menu {
+  display: none;
+}
+
 @media (max-width: 767.98px) {
   .hero {
     height: 600px;
@@ -21783,6 +21787,14 @@ textarea.form-control-lg {
     background-image: url(../images/bg-boost-mobile.svg) !important;
     background-position: center;
     background-size: cover;
+  }
+  .dropdown-btn {
+    width: 100%;
+  }
+  .Feature .dropdown a {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
   }
 }
 @media (max-width: 991.98px) {

@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./css/app.css">
     <title>url-shortening-api-master</title>
 </head>
+
 <body>
     <header>
         <nav class="navbar navbar-expand-lg my-5 ">
@@ -28,7 +29,7 @@
                     <a class="nav-link" href="#">Resources</a>
                   </li>
                   </ul>
-                  <div class="ms-auto">
+                  <div class="ms-lg-auto">
                     <a href="#" class="btn btn-link text-decoration-none">Login</a>
                   <a href="#" class="btn btn-link bg-primary text-decoration-none text-white rounded-pill ">Sign Up</a>
                    </div>
@@ -62,16 +63,53 @@
 
     <section class="Feature">
       <div class="container">
-        <div class="row p-5 p-lg-5 shorten rounded-2 mx-2 mx-md-0 mx-lg-0">
+        <div class="row p-3 p-lg-5 shorten rounded-2 mx-2 mx-md-0 mx-lg-0">
           <div class="col-12 col-lg-9 mb-3 mb-lg-0 ">
-            <input type="text" class="form-control" placeholder="Shorten a link here...">
+            <input type="text" id="form-input" class="form-control "  placeholder="Shorten a link here...">
+            <p id="invalid" class=""></p>
+            <p id="valid" class="mb-0 text-danger"></p>
           </div>
+          
           <div class="col-12 col-lg-3">
-            <button class="btn btn-primary text-white shorten-btn ">Shorten It!</button>
+           <button type="button" onclick="myFunction()"  class="btn btn-primary text-white shorten-btn dropdown-toggle">Shorten It!</button>
+           
           </div>
+          
         </div>
-      </div>
+        <!-- dropdown -->
+        <div id="dropdown" style="display: none;" class="dropdown mb-6">
 
+          <div class="d-flex flex-column flex-lg-row align-items-center bg-white shadow-sm p-3 rounded-2 mb-3">
+            <a href="#" class="text-black text-decoration-none  ">https://www.frontendmentor.io</a>
+            <hr class="w-100 d-block d-lg-none ">
+            <div class="ms-lg-auto ">
+              <a href="#" class="text-primary text-decoration-none me-3">https://relink/k4lKyk</a>
+              <a href="#" class="btn btn-link bg-primary text-decoration-none text-white dropdown-btn">Copy</a></div>
+            
+            
+          </div>
+
+          <div class="d-flex flex-column flex-lg-row align-items-center bg-white shadow-sm p-3 rounded-2 mb-3">
+            <a href="#" class="text-black text-decoration-none">https://twitter.com/frontendmentor</a>
+            <hr class="w-100 d-block d-lg-none ">
+            <div class="ms-lg-auto ">
+              <a href="#" class="text-primary text-decoration-none me-3 ">https://relink/gxOXp9</a>
+              <a href="#" class="btn btn-link bg-dark text-decoration-none text-white dropdown-btn">Copied!</a></div>
+
+          </div>
+
+          <div class="d-flex flex-column flex-lg-row align-items-center bg-white shadow-sm p-3 rounded-2">
+            <a href="#" style="" class="text-black text-decoration-none ">https://www.linkedin.com/company/frontend-mentor</a>
+            <hr class="w-100 d-block d-lg-none ">
+            <div class="ms-lg-auto ">
+              <a href="#" class="text-primary text-decoration-none me-3">https://relink/gob3X9</a>
+              <a href="#" class="btn btn-link bg-primary text-decoration-none text-white dropdown-btn">Copy</a></div>
+
+          </div>
+          
+        
+      </div>
+      
       <!-- advance static -->
       <div class="container">
         <div class="row justify-content-center text-center mb-6 ">
@@ -212,6 +250,8 @@
       </div>
      </div>
     </footer>
-    <div class="min-vh-100"></div>
+   
 </body>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
 </html>
